@@ -1,3 +1,3 @@
-#Premiers pas en JS
+# Premiers pas en JS
 
-Appeler le bon fichier JS en changeant le script dans l'index html
+Changez l'élément script dans le fichier index.html afin de parcourirs les exercices JS 😁

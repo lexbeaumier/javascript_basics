@@ -19,8 +19,8 @@ const entrepreneurs = [
   { first: 'Peter', last: 'Thiel', year: 1967 }
 ];
 
-
 // Question 1
+console.log('')
 console.log('Filtre dans cette liste les entrepreneurs qui sont nés dans les années 70');
 const results = entrepreneurs.filter(function (e) {
   return e.year > 1970 && e.year < 1979;
@@ -28,7 +28,18 @@ const results = entrepreneurs.filter(function (e) {
 
 console.log(results);
 
+// OU 
+/*
+entrepreneurs.filter(function (e) {
+  console.log(e.year > 1970 && e.year < 1979);
+
+});
+
+pas fini...  */
+
+
 // Question 2 
+console.log('')
 console.log('Sors une array qui contient le prénom et le nom des entrepreneurs');
 entrepreneurs.forEach((item) => {
   console.log(item.first, item.last)
@@ -36,10 +47,20 @@ entrepreneurs.forEach((item) => {
 
 
 // Question 3 
+console.log('')
 console.log('Quel âge aurait chaque inventeur aujourd\'hui ?');
-//const todayAge = entrepreneurs.
+{entrepreneurs.forEach(businessman => {
+  age = ( 2022 - businessman.year)
 
+  console.log(businessman.first + " " + businessman.last + " a " + age + " ans.")
+  });
+} 
 
 // Question 4 
+console.log('')
 console.log('Trie les entrepreneurs par ordre alphabétique du nom de famille');
-//
+function SortArray(x, y){
+  return x.last.localeCompare(y.last);
+}
+var s = entrepreneurs.sort(SortArray);
+console.log(s);
